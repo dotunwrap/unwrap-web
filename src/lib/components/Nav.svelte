@@ -2,6 +2,7 @@
   import NavButton from "./NavButton.svelte";
   import { isScrollBarAtTopOfPage } from "$lib/scrolling";
   import { onMount } from "svelte";
+  import { base } from "$app/paths";
 
   onMount(() => {
     window.addEventListener("scroll", () => {
@@ -22,9 +23,9 @@
 
 <nav id="nav" class="flex flex-row justify-center p-5 w-screen text-regular fixed top-0 left-0 right-0 z-50 transition-all">
     <div>
-        <NavButton href="/" text="Home" />
-        <NavButton href="/about" text="About" />
-        <!-- <NavButton href="/contact" text="Contact" /> -->
-        <NavButton href="/portfolio" text="Portfolio" />
+        <NavButton href="{base}/" text="Home" />
+        <NavButton href="{base}/about" text="About" />
+        <!-- <NavButton href="{base}/contact" text="Contact" /> -->
+        <NavButton href="{base}/portfolio" text="Portfolio" />
     </div>
 </nav>
