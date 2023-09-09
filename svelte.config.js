@@ -16,7 +16,7 @@ const config = {
 			assets: "build"
 		}),
 		prerender: {
-			entries: ["/", "/contact", "/about", "/portfolio"],
+			entries: ["/"],
 		},
 		paths: {
 			base: process.env.NODE_ENV === "development" ? "" : "/unwrap-web"

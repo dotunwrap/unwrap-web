@@ -1,6 +1,7 @@
 <script lang="ts">
     import { isElementScrolledPast, isScrollBarAtTopOfPage } from "$lib/scrolling";
     import { onMount } from "svelte";
+    import Icon from "@iconify/svelte";
 
     export let anchor: string;
 
@@ -22,6 +23,6 @@
     })
 </script>
 
-<button on:click={scrollToAnchor} bind:this={button} class="group text-subtext1 font-bold text-2xl absolute flex justify-center items-center bottom-2 left-0 right-0 animate-bounce transition-opacity">
-    <div class="rounded-full w-10 h-10 bg-crust shadow group-hover:bg-crust transition-colors flex justify-center items-center">↓</div>
+<button on:click={scrollToAnchor} bind:this={button} class="group inline-flex text-subtext1 font-bold text-2xl absolute justify-center items-center bottom-2 animate-bounce transition-opacity">
+    <Icon icon="fluent:arrow-circle-down-24-filled" class="text-subtext1 shadow w-12 h-12 group-hover:text-blue transition-colors rounded-full" />
 </button>
