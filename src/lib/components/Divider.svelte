@@ -7,7 +7,7 @@
 </script>
 
 {#if type === "horizontal"}
-<hr class="my-12 h-0.5 w-full border-t-0 bg-neutral-100 opacity-100 dark:opacity-50" />
+    <hr class="my-12 h-0.5 w-full border-t-0 dark:bg-neutral-100 bg-crust opacity-100 dark:opacity-50" />
 {:else if type === "vertical"}
     <div class="h-[500px] min-h-[1em] w-px self-stretch bg-gradient-to-tr from-transparent via-neutral-500 to-transparent opacity-20 dark:opacity-100" />
 {/if}

@@ -56,5 +56,9 @@
 
 
 <div class="{$$props.class}">
-    {typed}
+    {#if typed}
+        {typed}
+    {:else}
+        &nbsp;
+    {/if}
 </div>

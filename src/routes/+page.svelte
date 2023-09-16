@@ -6,6 +6,7 @@
     import Card from "$lib/components/Card.svelte";
     import JumpDown from "$lib/components/JumpDown.svelte";
     import Divider from "$lib/components/Divider.svelte";
+    import headshot from "$lib/assets/headshot.jpeg";
 
     const projects = [
         {
@@ -48,25 +49,31 @@
 </script>
 
 <Page>
-    <PageSection id="home" class="text-center bg-[url('/hero-splash.png')]">
+    <PageSection id="home" class="text-center">
         <FadeIn>
             <div id="main-animation" class="w-full flex flex-col lg:flex-row text-6xl justify-center items-center flex-wrap">
-                <TypeIt sentences={["engineer", "designer", "developer"]} class="italic text-subtext1" />
+                <TypeIt sentences={["engineer", "designer", "developer"]} class="italic text-subtext1 max-md:block" />
                 <h1><span class="text-sky">.</span><span class="text-blue italic">unwrap</span><span class="text-peach">()</span></h1>
             </div>
         </FadeIn>
         <JumpDown anchor="#about" />
     </PageSection>
     
-    <PageSection id="about" class="text-center [&>*]:my-3">
-        <FadeIn>
+    <PageSection id="about" class="text-center">
+        <FadeIn class="flex items-center justify-center my-10">
+            <img src={headshot} alt="Garrett's headshot" class="rounded-full max-md:w-32 w-52" />
+        </FadeIn>
+
+        <FadeIn delay={0.5}>
             <h2 class="text-4xl"><span class="text-blue font-bold">Garrett Simpson</span>, also known as <span class="text-blue font-bold">.unwrap</span>, is a full stack web engineer based in Ocala, FL.</h2>
         </FadeIn>
 
-        <Divider />
+        <FadeIn delay={0.75}>
+            <Divider />
+        </FadeIn>
 
         <FadeIn delay={1}>
-            <p class="text-lg">Results-driven software engineer with a fervent commitment to optimizing processes. Proficient in
+            <p class="text-xl">Results-driven software engineer with a fervent commitment to optimizing processes. Proficient in
                 cutting-edge tech stacks encompassing TypeScript, Python, Rust, and more. Proficient in DevOps
                 and cloud server administration. Skilled in Agile methodologies, delivering inventive solutions, and
                 continuous enhancement. Recognized for strategic foresight and imaginative troubleshooting.</p>
@@ -81,7 +88,7 @@
             {#each projects as project}
                 <FadeIn class="hover:transform translate-y-1" delay="{project.popupDelay}">
                     <a href="{project.url}" target="_blank">
-                        <Card title={project.title} description={project.description} isLink={true} tags={project.tags} class="h-40" />
+                        <Card title={project.title} description={project.description} isLink={true} tags={project.tags} />
                     </a>
                 </FadeIn>
             {/each}
