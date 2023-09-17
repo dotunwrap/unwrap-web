@@ -287,10 +287,6 @@
                 ]} />
             </FadeIn>
         </div>
-
-        <FadeIn class="flex justify-center items-center">
-            <Button text="Resume PDF" link="{resumePdf}" />
-        </FadeIn>
     </PageSection>
 </Page>
 
