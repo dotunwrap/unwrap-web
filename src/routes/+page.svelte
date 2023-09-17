@@ -12,7 +12,6 @@
     import punchmarkImage from "$lib/assets/punchmark.png";
     import hangulImage from "$lib/assets/hangul.png";
     import mandarinImage from "$lib/assets/mandarin.png";
-    import resumePdf from "$lib/assets/Garrett-Simpson-Fullstack-Engineer-Resume.pdf";
 
     const projects = [
         {
@@ -287,10 +286,6 @@
                 ]} />
             </FadeIn>
         </div>
-
-        <FadeIn class="flex justify-center items-center">
-            <Button text="Resume PDF" link="{resumePdf}" />
-        </FadeIn>
     </PageSection>
 </Page>
 
