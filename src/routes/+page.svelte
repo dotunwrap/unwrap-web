@@ -207,7 +207,7 @@
         </FadeIn>
 
         <FadeIn delay={0.5}>
-            <h2 class="text-4xl"><span class="text-blue font-bold">Garrett Simpson</span>, also known as <span class="text-blue font-bold">.unwrap</span>, is a full stack web engineer based in Ocala, FL.</h2>
+            <h2 class="text-4xl"><span class="text-blue font-bold">Garrett Simpson</span>, also known as <span class="text-blue font-bold">.unwrap</span>, is a full stack web engineer based in Charlotte, NC</h2>
         </FadeIn>
 
         <FadeIn delay={0.75} class="">
