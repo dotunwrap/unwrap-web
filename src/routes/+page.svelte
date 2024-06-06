@@ -9,21 +9,11 @@
     import Button from "$lib/components/Button.svelte";
     import Icon from "@iconify/svelte";
     import headshot from "$lib/assets/headshot.jpeg";
-    import punchmarkImage from "$lib/assets/punchmark.png";
-    import hangulImage from "$lib/assets/hangul.png";
     import dmhelperImage from "$lib/assets/dmhelper.png";
+    import hangulImage from "$lib/assets/hangul.png";
+    import mandarinImage from "$lib/assets/mandarin.png";
 
     const projects = [
-        {
-            title: "Punchmark",
-            date: "2021 - Present",
-            tags: ["PHP", "React", "MySQL", "SaaS"],
-            description:
-                "A SaaS platform providing an end-to-end e-commerce solution for the jewelry industry.",
-            image: punchmarkImage,
-            url: "https://punchmark.com",
-            popupDelay: 1,
-        },
         {
             title: "DM Helper",
             date: "2024",
@@ -42,6 +32,16 @@
                 "A web application written in Vue.js to help Korean learners master Hangul.",
             image: hangulImage,
             url: "https://github.com/dotunwrap/hangul-recognition/",
+            popupDelay: 1,
+        },
+        {
+            title: "Mandarin Tone Recognition",
+            date: "2023",
+            tags: ["TypeScript", "Svelte"],
+            description:
+                "A web application written in Svelte to help Mandarin learners differentiate vowel tones.",
+            image: mandarinImage,
+            url: "https://github.com/dotunwrap/mandarin-tone-recognition/",
             popupDelay: 1,
         },
     ];
@@ -241,14 +241,17 @@
         </FadeIn>
     </PageSection>
 
-    <PageSection id="portfolio">
+    <PageSection
+        id="portfolio"
+        class="flex flex-col justify-center items-center [&>*]:my-3"
+    >
         <FadeIn>
-            <h2 class="text-3xl text-blue text-center font-bold my-2">
+            <h2 class="text-3xl text-blue text-center font-bold mt-2">
                 My Work
             </h2>
         </FadeIn>
         <div
-            class="flex flex-row justify-center items-center max-w-7xl [&>*]:max-w-96 [&>*]:m-3 flex-wrap"
+            class="flex flex-row justify-center items-center max-w-7xl [&>*]:max-w-96 [&>*]:mb-3 flex-wrap"
         >
             {#each projects as project}
                 <FadeIn delay={project.popupDelay}>
@@ -299,8 +302,27 @@
             >
                 <Card
                     title="Full Stack Engineer"
+                    subtitle="MedShift - Velocity"
+                    date="2024 - Present"
+                    description="Velocity by MedShift is an extensive customer, product, payment, and commission management platform for the medical device industry."
+                    bullets={[
+                        "Develop and maintain reusable and intuitive frontend components using Vue 3 and Tailwind CSS, enhancing user experience and application performance.",
+                        "Improve backend API functionality and performance using Python, Django, and Django REST Framework, contributing to more efficient data handling and processing.",
+                        "Conduct thorough quality testing and code reviews for open pull requests, ensuring adherence to coding standards and improving overall code quality.",
+                        "Participate in regular Agile meetings, contributing to sprint planning, daily stand-ups, and retrospectives to ensure timely project delivery and continuous improvement.",
+                        "Manage and maintain PostgreSQL database, optimizing schema design and ensuring efficient data storage and retrieval.",
+                        "Integrate PostgreSQL database with backend API using Django ORM, facilitating seamless data interaction and enhancing application reliability.",
+                    ]}
+                />
+            </FadeIn>
+
+            <FadeIn
+                class="flex flex-col [&>*]:m-3 justify-center items-center max-w-7xl [&>*]:max-w-96"
+            >
+                <Card
+                    title="Full Stack Engineer"
                     subtitle="Punchmark"
-                    date="2021 - Present"
+                    date="2021 - 2024"
                     description="Punchmark is a SaaS platform providing an end-to-end e-commerce solution for the jewelry industry."
                     bullets={[
                         "Spearhead frontend and backend development for an industry-leading e-commerce platform, leveraging PHP, JavaScript (React/jQuery), and Sass.",

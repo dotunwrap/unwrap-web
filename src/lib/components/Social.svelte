@@ -10,7 +10,7 @@
         throw new Error("Invalid social");
     }
 
-    const socials: {[name: string]: {url: string; icon: string}} = {
+    const socials: { [name: string]: { url: string; icon: string } } = {
         twitter: {
             url: "https://twitter.com/dotunwrap",
             icon: "simple-icons:x",
@@ -26,10 +26,15 @@
         email: {
             url: "mailto:dotunwrap@pm.me",
             icon: "simple-icons:protonmail",
-        }
+        },
     };
 </script>
 
-<a href="{socials[name].url}" target="_blank" class="group text-subtext1">
-    <Icon icon="{socials[name].icon}" width={width} height={height} class="group-hover:text-blue transition-colors" />
+<a href={socials[name].url} target="_blank" class="group text-subtext1">
+    <Icon
+        icon={socials[name].icon}
+        {width}
+        {height}
+        class="group-hover:text-blue transition-colors"
+    />
 </a>

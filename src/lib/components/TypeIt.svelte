@@ -1,13 +1,13 @@
 <script lang="ts">
     import { onMount, onDestroy } from "svelte";
-    
+
     export let sentences: string[];
     let sentenceIndex = 0;
     let typed = "";
     let currentIndex = 0;
     let isDeleting = false;
-    let typingInterval:  ReturnType<typeof setTimeout> | null = null;
-    let deletingInterval:  ReturnType<typeof setTimeout> | null = null;
+    let typingInterval: ReturnType<typeof setTimeout> | null = null;
+    let deletingInterval: ReturnType<typeof setTimeout> | null = null;
 
     const startTyping = () => {
         typingInterval = setInterval(() => {
@@ -27,7 +27,7 @@
                 startDeleting();
             }, 1000);
         }, 100);
-    }
+    };
 
     const startDeleting = () => {
         deletingInterval = setInterval(() => {
@@ -42,7 +42,7 @@
             currentIndex = 0;
             startTyping();
         }, 100);
-    }
+    };
 
     onMount(() => {
         startTyping();
@@ -54,11 +54,11 @@
     });
 </script>
 
-
-<div class="{$$props.class}">
+<div class={$$props.class}>
     {#if typed}
         {typed}
     {:else}
         &nbsp;
     {/if}
 </div>
+

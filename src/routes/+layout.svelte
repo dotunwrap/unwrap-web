@@ -5,7 +5,9 @@
 </script>
 
 <html lang="en">
-    <body class="min-h-screen flex flex-col bg-gradient-to-b from-base to-mantle text-text dark:frappe">
+    <body
+        class="min-h-screen flex flex-col bg-gradient-to-b from-base to-mantle text-text dark:frappe"
+    >
         <Nav />
 
         <main class="min-h-screen flex justify-center items-center">
