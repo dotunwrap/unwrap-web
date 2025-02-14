@@ -8,7 +8,8 @@
         "preview": "vite preview",
         "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
         "check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
-        "format": "prettier --write --list-different ."
+        "format": "prettier --write --list-different .",
+        "format:check": "prettier --check ."
     },
     "devDependencies": {
         "@catppuccin/tailwindcss": "^0.1.6",
