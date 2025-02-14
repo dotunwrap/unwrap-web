@@ -24,10 +24,7 @@
     });
 </script>
 
-<div
-    class="fade-in {isVisible ? 'visible' : ''} w-full {$$props.class}"
-    bind:this={div}
->
+<div class="fade-in {isVisible ? 'visible' : ''} w-full {$$props.class}" bind:this={div}>
     <slot />
 </div>
 
