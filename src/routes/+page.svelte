@@ -18,8 +18,7 @@
             title: "DM Helper",
             date: "2024",
             tags: ["Rust", "Tokio", "Discord"],
-            description:
-                "A D&D management Discord bot written in Rust using Poise.",
+            description: "A D&D management Discord bot written in Rust using Poise.",
             image: dmhelperImage,
             url: "https://github.com/dotunwrap/dm-helper/",
             popupDelay: 1,
@@ -194,9 +193,9 @@
                     class="italic text-subtext1 max-md:block"
                 />
                 <h1>
-                    <span class="text-sky">.</span><span
-                        class="text-blue italic">unwrap</span
-                    ><span class="text-peach">()</span>
+                    <span class="text-sky">.</span><span class="text-blue italic">unwrap</span><span
+                        class="text-peach">()</span
+                    >
                 </h1>
             </div>
         </FadeIn>
@@ -205,18 +204,14 @@
 
     <PageSection id="about" class="text-center">
         <FadeIn class="flex items-center justify-center my-10">
-            <img
-                src={headshot}
-                alt="Garrett's headshot"
-                class="rounded-full max-md:w-32 w-52"
-            />
+            <img src={headshot} alt="Garrett's headshot" class="rounded-full max-md:w-32 w-52" />
         </FadeIn>
 
         <FadeIn delay={0.5}>
             <h2 class="text-4xl">
-                <span class="text-blue font-bold">Garrett Simpson</span>, also
-                known as <span class="text-blue font-bold">.unwrap</span>, is a
-                full stack web engineer based in Charlotte, NC
+                <span class="text-blue font-bold">Garrett Simpson</span>, also known as
+                <span class="text-blue font-bold">.unwrap</span>, is a full stack web engineer based
+                in Charlotte, NC
             </h2>
         </FadeIn>
 
@@ -226,13 +221,12 @@
 
         <FadeIn delay={1}>
             <p class="text-xl">
-                Results-driven software engineer with a fervent commitment to
-                optimizing processes. Proficient in cutting-edge tech stacks
-                encompassing TypeScript, Python, Rust, and more. Proficient in
-                DevOps and cloud server administration. Skilled in Agile
-                methodologies, delivering inventive solutions, and continuous
-                enhancement. Recognized for strategic foresight and imaginative
-                troubleshooting.
+                Customer-focused software engineer with four years of experience in full-stack
+                development, specializing in Rust, Python, TypeScript, and more. Recognized for
+                architecting and implementing end-to-end solutions across the stack. Proficient in
+                DevOps and cloud orchestration using AWS. Adept at collaborating in Agile teams to
+                build scalable, user-centric software solutions that drive user satisfaction and
+                business growth.
             </p>
         </FadeIn>
 
@@ -241,14 +235,9 @@
         </FadeIn>
     </PageSection>
 
-    <PageSection
-        id="portfolio"
-        class="flex flex-col justify-center items-center [&>*]:my-3"
-    >
+    <PageSection id="portfolio" class="flex flex-col justify-center items-center [&>*]:my-3">
         <FadeIn>
-            <h2 class="text-3xl text-blue text-center font-bold mt-2">
-                My Work
-            </h2>
+            <h2 class="text-3xl text-blue text-center font-bold mt-2">My Work</h2>
         </FadeIn>
         <div
             class="flex flex-row justify-center items-center max-w-7xl [&>*]:max-w-96 [&>*]:mb-3 flex-wrap"
@@ -270,20 +259,13 @@
         </div>
     </PageSection>
 
-    <PageSection
-        id="resume"
-        class="flex flex-col justify-center items-center [&>*]:my-3"
-    >
+    <PageSection id="resume" class="flex flex-col justify-center items-center [&>*]:my-3">
         <div id="skills">
             <FadeIn>
-                <h2 class="text-3xl font-bold text-blue text-center my-2">
-                    Skills
-                </h2>
+                <h2 class="text-3xl font-bold text-blue text-center my-2">Skills</h2>
             </FadeIn>
 
-            <FadeIn
-                class="text-lg flex flex-row flex-wrap justify-center items-center [&>*]:m-1"
-            >
+            <FadeIn class="text-lg flex flex-row flex-wrap justify-center items-center [&>*]:m-1">
                 {#each skills as skill}
                     <Icon icon={skill.icon} width={46} height={46} />
                 {/each}
@@ -292,26 +274,21 @@
 
         <div id="work-history">
             <FadeIn>
-                <h2 class="text-3xl font-bold text-blue text-center my-2">
-                    Experience
-                </h2>
+                <h2 class="text-3xl font-bold text-blue text-center my-2">Experience</h2>
             </FadeIn>
 
             <FadeIn
                 class="flex flex-col [&>*]:m-3 justify-center items-center max-w-7xl [&>*]:max-w-96"
             >
                 <Card
-                    title="Full Stack Engineer"
+                    title="Software Engineer III"
                     subtitle="MedShift - Velocity"
                     date="2024 - Present"
                     description="Velocity by MedShift is an extensive customer, product, payment, and commission management platform for the medical device industry."
                     bullets={[
-                        "Develop and maintain reusable and intuitive frontend components using Vue 3 and Tailwind CSS, enhancing user experience and application performance.",
-                        "Improve backend API functionality and performance using Python, Django, and Django REST Framework, contributing to more efficient data handling and processing.",
-                        "Conduct thorough quality testing and code reviews for open pull requests, ensuring adherence to coding standards and improving overall code quality.",
-                        "Participate in regular Agile meetings, contributing to sprint planning, daily stand-ups, and retrospectives to ensure timely project delivery and continuous improvement.",
-                        "Manage and maintain PostgreSQL database, optimizing schema design and ensuring efficient data storage and retrieval.",
-                        "Integrate PostgreSQL database with backend API using Django ORM, facilitating seamless data interaction and enhancing application reliability.",
+                        "Developing a B2B medtech web application using Python (Django and Django REST Framework), Vue, React, and Tailwind.",
+                        "Owning customer-focused development projects, encompassing client onboardings, custom development work, and internal processes surrounding them.",
+                        "Responsible for low-level, technical discussions and collaborations with partner companies and clients.",
                     ]}
                 />
             </FadeIn>
@@ -320,18 +297,17 @@
                 class="flex flex-col [&>*]:m-3 justify-center items-center max-w-7xl [&>*]:max-w-96"
             >
                 <Card
-                    title="Full Stack Engineer"
+                    title="Full Stack & DevOps Engineer"
                     subtitle="Punchmark"
                     date="2021 - 2024"
                     description="Punchmark is a SaaS platform providing an end-to-end e-commerce solution for the jewelry industry."
                     bullets={[
-                        "Spearhead frontend and backend development for an industry-leading e-commerce platform, leveraging PHP, JavaScript (React/jQuery), and Sass.",
-                        "Collaborate closely within a tight-knit team of three engineers to oversee end-to-end management of a comprehensive platform, spanning engineering, DevOps, security, database administration, and sysadmin responsibilities.",
-                        "Demonstrate adaptability in a small team environment and a commitment to working flexible schedules to ensure deadlines are consistently met.",
-                        "Oversee company-wide DevOps operations on AWS, orchestrating cloud deployments through Ansible.",
-                        "Architect in-house REST APIs and seamlessly integrate vendor APIs, enhancing platform functionality.",
-                        "Drive Scrum team collaboration, conducting regular code reviews, and ensuring agile project delivery.",
-                        "Demonstrate a strong commitment to weekly deployments, ensuring consistent platform updates.",
+                        "Drove development for an e-commerce platform using PHP, JavaScript (React), and Sass in a small team environment.",
+                        "Managed end-to-end platform operations including DevOps, security, and database administration.",
+                        "Led incident response to a critical security breach from investigation to implementation, delivering an entire authentication service overhaul within two weeks.",
+                        "Demonstrated security vulnerability PoCs alongside solutions.",
+                        "Owned development of an extendable data-ingestion framework capable of efficiently handling thousands of gigabytes of data per hour.",
+                        "Orchestrated cloud deployments on AWS with Ansible and Docker.",
                     ]}
                 />
             </FadeIn>
@@ -339,9 +315,7 @@
 
         <div id="education">
             <FadeIn>
-                <h2 class="text-3xl font-bold text-blue text-center my-2">
-                    Education
-                </h2>
+                <h2 class="text-3xl font-bold text-blue text-center my-2">Education</h2>
             </FadeIn>
 
             <FadeIn
@@ -350,12 +324,12 @@
                 <Card
                     title="Associate of Applied Science (Cybersecurity)"
                     subtitle="Rowan Cabarrus Community College"
-                    date="2016 - 2021"
+                    date="2016 - 2020"
                     description=""
                     bullets={[
-                        "Completed over fifty credits of coursework spanning IT, cybersecurity, and computer science.",
-                        "Gained a comprehensive understanding of software engineering principles, containerized full stack web apps, RESTful APIs, image decryption, network security, and reverse engineering.",
-                        "Acquired hands-on experience in red and blue team penetration testing methodologies.",
+                        "Completed over fifty credits of coursework spanning IT, cybersecurity, and computer science while enrolled in an early college program at the Cabarrus Early College of Technology.",
+                        "Gained a comprehensive understanding of software engineering principles, containerized, full-stack web apps, RESTful APIs, image decryption, network security, and reverse engineering.",
+                        "Acquired hands-on experience in red and blue team activities.",
                     ]}
                 />
             </FadeIn>

@@ -77,9 +77,7 @@
             threshold: 0.25,
         });
         buttons.forEach((button) =>
-            observer.observe(
-                document.getElementById(button.target) as HTMLElement,
-            ),
+            observer.observe(document.getElementById(button.target) as HTMLElement),
         );
     });
 </script>

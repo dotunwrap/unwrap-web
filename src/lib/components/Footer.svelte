@@ -2,10 +2,7 @@
     import Social from "./Social.svelte";
 </script>
 
-<footer
-    id="footer"
-    class="flex flex-row bg-crust items-center py-3 justify-center"
->
+<footer id="footer" class="flex flex-row bg-crust items-center py-3 justify-center">
     <div class="flex flex-row justify-center items-center [&>*]:mx-2">
         <Social name="github" />
         <Social name="linkedin" />
@@ -18,4 +15,3 @@
         >view source →</a
     >
 </footer>
-

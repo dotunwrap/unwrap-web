@@ -32,11 +32,7 @@
     {/if}
     {#if image}
         <div class="w-full h-64">
-            <img
-                src={image}
-                alt=""
-                class="w-full h-full object-cover rounded-lg"
-            />
+            <img src={image} alt="" class="w-full h-full object-cover rounded-lg" />
         </div>
     {/if}
     {#if bullets.length}
@@ -49,9 +45,7 @@
     {#if tags.length || isLink}
         <div class="flex flex-row justify-between self-between items-center">
             {#if tags.length}
-                <ul
-                    class="list-none flex flex-row items-center text-center text-crust text-sm"
-                >
+                <ul class="list-none flex flex-row items-center text-center text-crust text-sm">
                     {#each tags as tag}
                         <li class="bg-blue rounded-full py-1 px-2 mx-1">
                             {tag.toUpperCase()}
@@ -77,4 +71,3 @@
         </div>
     {/if}
 </div>
-
