@@ -9,11 +9,22 @@
     import Button from "$lib/components/Button.svelte";
     import Icon from "@iconify/svelte";
     import headshot from "$lib/assets/headshot.jpeg";
+    import goldbachsImage from "$lib/assets/goldbachs.png";
     import dmhelperImage from "$lib/assets/dmhelper.png";
     import hangulImage from "$lib/assets/hangul.png";
     import mandarinImage from "$lib/assets/mandarin.png";
 
     const projects = [
+        {
+            title: "Goldbach's Conjecture Solver",
+            date: "2025",
+            tags: ["Rust"],
+            description:
+                "A Rust program that attempts to solve Goldbach's Conjecture, which states that every even integer greater than 2 can be expressed as the sum of two prime numbers.",
+            image: goldbachsImage,
+            url: "https://github.com/dotunwrap/goldbachs-conjecture-solver",
+            popupDelay: 1,
+        },
         {
             title: "DM Helper",
             date: "2024",
