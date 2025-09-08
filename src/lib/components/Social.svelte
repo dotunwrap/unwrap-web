@@ -24,7 +24,7 @@
             icon: "simple-icons:linkedin",
         },
         email: {
-            url: "mailto:dotunwrap@pm.me",
+            url: "mailto:gabby@dotunwrap.dev",
             icon: "simple-icons:protonmail",
         },
     };

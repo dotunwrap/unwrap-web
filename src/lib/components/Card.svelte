@@ -2,13 +2,13 @@
     import Icon from "@iconify/svelte";
 
     export let title: string;
-    export let subtitle = "";
-    export let date = "";
+    export let subtitle: string = "";
+    export let date: string = "";
     export let tags: string[] = [];
     export let description: string;
     export let bullets: string[] = [];
-    export let image = "";
-    export let isLink = false;
+    export let image: string = "";
+    export let isLink: boolean = false;
 </script>
 
 <div
@@ -36,9 +36,9 @@
         </div>
     {/if}
     {#if bullets.length}
-        <ul class="list-none">
+        <ul class="list-disc list-outside">
             {#each bullets as bullet}
-                <li class="text-regular">➔ {bullet}</li>
+                <li class="text-regular ml-4">{bullet}</li>
             {/each}
         </ul>
     {/if}

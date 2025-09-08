@@ -6,6 +6,7 @@
     <div class="flex flex-row justify-center items-center [&>*]:mx-2">
         <Social name="github" />
         <Social name="linkedin" />
+        <Social name="twitter" />
         <Social name="email" />
     </div>
     <a

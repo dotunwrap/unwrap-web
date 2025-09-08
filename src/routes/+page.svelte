@@ -9,19 +9,22 @@
     import Button from "$lib/components/Button.svelte";
     import Icon from "@iconify/svelte";
     import headshot from "$lib/assets/headshot.jpeg";
-    import goldbachsImage from "$lib/assets/goldbachs.png";
-    import dmhelperImage from "$lib/assets/dmhelper.png";
-    import hangulImage from "$lib/assets/hangul.png";
-    import mandarinImage from "$lib/assets/mandarin.png";
 
     const projects = [
+        {
+            title: "determinvim",
+            date: "2025",
+            tags: ["Nix", "Neovim"],
+            description: "A Neovim configuration written in Nix using nvf.",
+            url: "https://github.com/dotunwrap/determinvim",
+            popupDelay: 1,
+        },
         {
             title: "Goldbach's Conjecture Solver",
             date: "2025",
             tags: ["Rust"],
             description:
                 "A Rust program that attempts to solve Goldbach's Conjecture, which states that every even integer greater than 2 can be expressed as the sum of two prime numbers.",
-            image: goldbachsImage,
             url: "https://github.com/dotunwrap/goldbachs-conjecture-solver",
             popupDelay: 1,
         },
@@ -30,7 +33,6 @@
             date: "2024",
             tags: ["Rust", "Tokio", "Discord"],
             description: "A D&D management Discord bot written in Rust using Poise.",
-            image: dmhelperImage,
             url: "https://github.com/dotunwrap/dm-helper/",
             popupDelay: 1,
         },
@@ -40,7 +42,6 @@
             tags: ["TypeScript", "Vue"],
             description:
                 "A web application written in Vue.js to help Korean learners master Hangul.",
-            image: hangulImage,
             url: "https://github.com/dotunwrap/hangul-recognition/",
             popupDelay: 1,
         },
@@ -50,7 +51,6 @@
             tags: ["TypeScript", "Svelte"],
             description:
                 "A web application written in Svelte to help Mandarin learners differentiate vowel tones.",
-            image: mandarinImage,
             url: "https://github.com/dotunwrap/mandarin-tone-recognition/",
             popupDelay: 1,
         },
@@ -189,6 +189,14 @@
             name: "AWS",
             icon: "skill-icons:aws-dark",
         },
+        {
+            name: "Red Hat Enterprise Linux",
+            icon: "skill-icons:redhat-dark",
+        },
+        {
+            name: "Neovim",
+            icon: "skill-icons:neovim-dark",
+        },
     ];
 </script>
 
@@ -215,12 +223,12 @@
 
     <PageSection id="about" class="text-center">
         <FadeIn class="flex items-center justify-center my-10">
-            <img src={headshot} alt="Garrett's headshot" class="rounded-full max-md:w-32 w-52" />
+            <img src={headshot} alt="Gabby's headshot" class="rounded-full max-md:w-32 w-52" />
         </FadeIn>
 
         <FadeIn delay={0.5}>
             <h2 class="text-4xl">
-                <span class="text-blue font-bold">Garrett Simpson</span>, also known as
+                <span class="text-blue font-bold">Gabby Simpson</span>, also known as
                 <span class="text-blue font-bold">.unwrap</span>, is a full stack web engineer based
                 in Charlotte, NC
             </h2>
@@ -232,7 +240,7 @@
 
         <FadeIn delay={1}>
             <p class="text-xl">
-                Customer-focused software engineer with four years of experience in full-stack
+                Customer-focused software engineer with over four years of experience in full-stack
                 development, specializing in Rust, Python, TypeScript, and more. Recognized for
                 architecting and implementing end-to-end solutions across the stack. Proficient in
                 DevOps and cloud orchestration using AWS. Adept at collaborating in Agile teams to
@@ -242,7 +250,7 @@
         </FadeIn>
 
         <FadeIn delay={1} class="flex justify-center items-center my-9">
-            <Button link="https://github.com/dotunwrap" text="View my work" />
+            <Button link="https://github.com/dotunwrap" text="View my work" openInNewTab={true} />
         </FadeIn>
     </PageSection>
 
@@ -297,9 +305,9 @@
                     date="2024 - Present"
                     description="Velocity by MedShift is an extensive customer, product, payment, and commission management platform for the medical device industry."
                     bullets={[
-                        "Developing a B2B medtech web application using Python (Django and Django REST Framework), Vue, React, and Tailwind.",
-                        "Owning customer-focused development projects, encompassing client onboardings, custom development work, and internal processes surrounding them.",
-                        "Responsible for low-level, technical discussions and collaborations with partner companies and clients.",
+                        "Developed two B2B medtech SPAs using Python, Django, Django REST Framework, Vue, React, and Tailwind.",
+                        "Owned client onboarding and custom development initiatives end-to-end, streamlining processes to reduce time-to-onboard from weeks to days.",
+                        "Led end-to-end custom integrations with partner APIs (e.g., Stripe, Firebase, Metabase), implementing idempotent workflows to ensure reliable, repeatable data syncs.",
                     ]}
                 />
             </FadeIn>
@@ -316,8 +324,8 @@
                         "Drove development for an e-commerce platform using PHP, JavaScript (React), and Sass in a small team environment.",
                         "Managed end-to-end platform operations including DevOps, security, and database administration.",
                         "Led incident response to a critical security breach from investigation to implementation, delivering an entire authentication service overhaul within two weeks.",
-                        "Demonstrated security vulnerability PoCs alongside solutions.",
-                        "Owned development of an extendable data-ingestion framework capable of efficiently handling thousands of gigabytes of data per hour.",
+                        "Investigated and resolved security vulnerabilities using Burp Suite.",
+                        "Owned development of an extendable data-ingestion framework capable of efficiently handling terabytes of data per hour, resulting in a greater than 50% increase in performance.",
                         "Orchestrated cloud deployments on AWS with Ansible and Docker.",
                     ]}
                 />
@@ -343,6 +351,12 @@
                         "Acquired hands-on experience in red and blue team activities.",
                     ]}
                 />
+            </FadeIn>
+        </div>
+
+        <div id="resume-download">
+            <FadeIn class="flex justify-center items-center">
+                <Button link="https://github.com/dotunwrap/resume/releases/latest/download/gabriella-simpson-software-engineer-resume.pdf" text="Download my resume" />
             </FadeIn>
         </div>
     </PageSection>

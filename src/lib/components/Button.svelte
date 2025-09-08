@@ -2,11 +2,12 @@
     import Icon from "@iconify/svelte";
     export let link: string;
     export let text = "";
+    export let openInNewTab = false;
 </script>
 
 <a
     href={link}
-    target="_blank"
+    target={ openInNewTab ? "_blank" : "_self" }
     class="rounded-full bg-crust hover:bg-blue group transition-colors p-3"
 >
     {#if text}
