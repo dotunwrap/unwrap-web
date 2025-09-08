@@ -1,5 +1,5 @@
 <script lang="ts">
-    import { isElementScrolledPast, isScrollBarAtTopOfPage } from "$lib/scrolling";
+    import { isScrollBarAtTopOfPage } from "$lib/scrolling";
     import { onMount } from "svelte";
     import Icon from "@iconify/svelte";
 
@@ -16,7 +16,6 @@
 
     const scrollHandler = () => {
         if (isScrollBarAtTopOfPage()) return button?.classList.remove("opacity-0");
-        if (!isElementScrolledPast(button)) return;
         button?.classList.add("opacity-0");
     };
 
