@@ -1,4 +1,4 @@
-name: Frontend/CD
+name: Frontend / CD
 on:
   push:
     branches:
@@ -11,33 +11,39 @@ permissions:
   pages: write
   id-token: write
 concurrency:
-  group: pages
+  group: frontend-cd-${{ github.ref }}
   cancel-in-progress: false
+env:
+  MODULE_DIR: ./frontend
+  # TODO: Pin version
+  BUN_VERSION: latest
 jobs:
   deploy:
+    name: Deploy to GH Pages
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ${{ env.MODULE_DIR }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
       - name: Setup Bun
         uses: oven-sh/setup-bun@v2
         with:
-          bun-version: latest
+          bun-version: ${{ env.BUN_VERSION }}
       - name: Install dependencies
-        working-directory: ./frontend
         run: bun install --frozen-lockfile
       - name: Build
-        working-directory: ./frontend
         run: bun run build
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./frontend/build
+          path: ${{ env.MODULE_DIR }}/build
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
