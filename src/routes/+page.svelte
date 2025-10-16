@@ -186,6 +186,10 @@
             icon: "skill-icons:ansible",
         },
         {
+            name: "Terraform",
+            icon: "skill-icons:terraform-dark",
+        },
+        {
             name: "AWS",
             icon: "skill-icons:aws-dark",
         },
@@ -300,9 +304,20 @@
                 class="flex flex-col [&>*]:m-3 justify-center items-center max-w-7xl [&>*]:max-w-96"
             >
                 <Card
+                    title="Software Engineer"
+                    subtitle="Red Ventures - RVGT"
+                    date="October 2025 - Present"
+                    description="Red Ventures Growth & Transformation (RVGT) is a Red Ventures company that drives measurable growth for the world’s leading financial institutions — transforming how they acquire, engage, and retain customers."
+                />
+            </FadeIn>
+
+            <FadeIn
+                class="flex flex-col [&>*]:m-3 justify-center items-center max-w-7xl [&>*]:max-w-96"
+            >
+                <Card
                     title="Software Engineer III"
                     subtitle="MedShift - Velocity"
-                    date="2024 - Present"
+                    date="May 2024 - October 2025"
                     description="Velocity by MedShift is an extensive customer, product, payment, and commission management platform for the medical device industry."
                     bullets={[
                         "Developed two B2B medtech SPAs using Python, Django, Django REST Framework, Vue, React, and Tailwind.",
@@ -318,7 +333,7 @@
                 <Card
                     title="Full Stack & DevOps Engineer"
                     subtitle="Punchmark"
-                    date="2021 - 2024"
+                    date="June 2021 - May 2024"
                     description="Punchmark is a SaaS platform providing an end-to-end e-commerce solution for the jewelry industry."
                     bullets={[
                         "Drove development for an e-commerce platform using PHP, JavaScript (React), and Sass in a small team environment.",
@@ -356,7 +371,10 @@
 
         <div id="resume-download">
             <FadeIn class="flex justify-center items-center">
-                <Button link="https://github.com/dotunwrap/resume/releases/latest/download/gabriella-simpson-software-engineer-resume.pdf" text="Download my resume" />
+                <Button
+                    link="https://github.com/dotunwrap/resume/releases/latest/download/gabriella-simpson-software-engineer-resume.pdf"
+                    text="Download my resume"
+                />
             </FadeIn>
         </div>
     </PageSection>
