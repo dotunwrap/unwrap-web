@@ -1,0 +1,68 @@
+services:
+  backend:
+    build:
+      context: ./backend
+      target: prod
+    environment:
+      GIN_MODE: release
+    ports:
+      - "8000:8000"
+    restart: unless-stopped
+    profiles:
+      - prod
+
+  frontend:
+    build:
+      context: ./frontend
+      target: prod
+    depends_on:
+      - backend
+    environment:
+      NODE_ENV: production
+    ports:
+      - "8080:80"
+    restart: unless-stopped
+    profiles:
+      - prod
+
+  backend-dev:
+    build:
+      context: ./backend
+      target: dev
+    environment:
+      GIN_MODE: debug
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./backend:/app
+      - go-build-cache:/root/.cache/go-build
+      - go-mod-cache:/go/pkg/mod
+    profiles:
+      - dev
+
+  frontend-dev:
+    build:
+      context: ./frontend
+      target: dev
+    depends_on:
+      - backend-dev
+    environment:
+      NODE_ENV: development
+      CHOKIDAR_USEPOLLING: "1"
+      VITE_DEV_API_TARGET: http://backend-dev:8000
+    ports:
+      - "5127:5127"
+    volumes:
+      - ./frontend:/usr/src/app
+      - frontend-node-modules:/usr/src/app/node_modules
+    profiles:
+      - dev
+
+networks:
+  default:
+    name: unwrap-net
+
+volumes:
+  go-build-cache:
+  go-mod-cache:
+  frontend-node-modules:
