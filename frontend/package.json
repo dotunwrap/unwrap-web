@@ -1,41 +1,41 @@
 {
-  "name": "unwrap-web",
-  "version": "0.0.1",
-  "private": true,
-  "scripts": {
-    "dev": "vite dev",
-    "build": "vite build",
-    "preview": "vite preview",
-    "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
-    "check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
-    "format": "prettier --write --list-different .",
-    "format:check": "prettier --check ."
-  },
-  "devDependencies": {
-    "@catppuccin/tailwindcss": "^1.0.0",
-    "@iconify/svelte": "^5.0.2",
-    "@sveltejs/adapter-auto": "^6.1.1",
-    "@sveltejs/adapter-static": "^3.0.10",
-    "@sveltejs/kit": "^2.47.0",
-    "@tailwindcss/postcss": "^4.1.14",
-    "@trivago/prettier-plugin-sort-imports": "^5.2.2",
-    "autoprefixer": "^10.4.21",
-    "postcss": "^8.5.6",
-    "prettier": "^3.6.2",
-    "prettier-plugin-svelte": "^3.4.0",
-    "prettier-plugin-tailwindcss": "^0.7.0",
-    "svelte": "^5.40.1",
-    "svelte-check": "^4.3.3",
-    "svelte-preprocess": "^6.0.3",
-    "tailwindcss": "^4.1.14",
-    "tslib": "^2.8.1",
-    "typescript": "^5.9.3",
-    "vite": "^7.1.10"
-  },
-  "type": "module",
-  "trustedDependencies": [
-    "@tailwindcss/oxide",
-    "esbuild",
-    "svelte-preprocess"
-  ]
+    "name": "unwrap-web",
+    "version": "0.0.1",
+    "private": true,
+    "scripts": {
+        "dev": "vite dev",
+        "build": "vite build",
+        "preview": "vite preview",
+        "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
+        "check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
+        "format": "prettier --write --list-different .",
+        "format:check": "prettier --check ."
+    },
+    "devDependencies": {
+        "@catppuccin/tailwindcss": "^1.0.0",
+        "@iconify/svelte": "^5.0.2",
+        "@sveltejs/adapter-auto": "^6.1.1",
+        "@sveltejs/adapter-static": "^3.0.10",
+        "@sveltejs/kit": "^2.47.0",
+        "@tailwindcss/postcss": "^4.1.14",
+        "@trivago/prettier-plugin-sort-imports": "^5.2.2",
+        "autoprefixer": "^10.4.21",
+        "postcss": "^8.5.6",
+        "prettier": "^3.6.2",
+        "prettier-plugin-svelte": "^3.4.0",
+        "prettier-plugin-tailwindcss": "^0.7.0",
+        "svelte": "^5.40.1",
+        "svelte-check": "^4.3.3",
+        "svelte-preprocess": "^6.0.3",
+        "tailwindcss": "^4.1.14",
+        "tslib": "^2.8.1",
+        "typescript": "^5.9.3",
+        "vite": "^7.1.10"
+    },
+    "type": "module",
+    "trustedDependencies": [
+        "@tailwindcss/oxide",
+        "esbuild",
+        "svelte-preprocess"
+    ]
 }
