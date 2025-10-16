@@ -4,9 +4,5 @@ export default {
     theme: {
         extend: {},
     },
-    plugins: [
-        require("@catppuccin/tailwindcss")({
-            defaultFlavour: "latte",
-        }),
-    ],
+    plugins: [],
 };
