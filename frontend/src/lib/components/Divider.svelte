@@ -13,5 +13,5 @@
 {:else if type === "vertical"}
     <div
         class="h-[500px] min-h-[1em] w-px self-stretch bg-linear-to-tr from-transparent via-neutral-500 to-transparent opacity-20 dark:opacity-100 {$$props.class}"
-    />
+    ></div>
 {/if}

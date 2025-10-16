@@ -270,7 +270,6 @@
                             title={project.title}
                             date={project.date}
                             description={project.description}
-                            image={project.image}
                             isLink={true}
                             tags={project.tags}
                             class="w-full"
@@ -316,9 +315,9 @@
                         subtitle="MedShift - Velocity"
                         date="May 2024 - October 2025"
                         description="Velocity by MedShift is an extensive customer, product, payment, and commission management platform for the medical device industry."
-                    bullets={[
-                        "Developed two B2B medtech SPAs using Python, Django, Django REST Framework, Vue, React, and Tailwind.",
-                        "Owned client onboarding and custom development initiatives end-to-end, streamlining processes to reduce time-to-onboard from weeks to days.",
+                        bullets={[
+                            "Developed two B2B medtech SPAs using Python, Django, Django REST Framework, Vue, React, and Tailwind.",
+                            "Owned client onboarding and custom development initiatives end-to-end, streamlining processes to reduce time-to-onboard from weeks to days.",
                             "Led end-to-end custom integrations with partner APIs (e.g., Stripe, Firebase, Metabase), implementing idempotent workflows to ensure reliable, repeatable data syncs.",
                         ]}
                         class="w-full"
@@ -331,11 +330,11 @@
                         subtitle="Punchmark"
                         date="June 2021 - May 2024"
                         description="Punchmark is a SaaS platform providing an end-to-end e-commerce solution for the jewelry industry."
-                    bullets={[
-                        "Drove development for an e-commerce platform using PHP, JavaScript (React), and Sass in a small team environment.",
-                        "Managed end-to-end platform operations including DevOps, security, and database administration.",
-                        "Led incident response to a critical security breach from investigation to implementation, delivering an entire authentication service overhaul within two weeks.",
-                        "Investigated and resolved security vulnerabilities using Burp Suite.",
+                        bullets={[
+                            "Drove development for an e-commerce platform using PHP, JavaScript (React), and Sass in a small team environment.",
+                            "Managed end-to-end platform operations including DevOps, security, and database administration.",
+                            "Led incident response to a critical security breach from investigation to implementation, delivering an entire authentication service overhaul within two weeks.",
+                            "Investigated and resolved security vulnerabilities using Burp Suite.",
                             "Owned development of an extendable data-ingestion framework capable of efficiently handling terabytes of data per hour, resulting in a greater than 50% increase in performance.",
                             "Orchestrated cloud deployments on AWS with Ansible and Docker.",
                         ]}
@@ -357,8 +356,8 @@
                         subtitle="Rowan Cabarrus Community College"
                         date="2016 - 2020"
                         description=""
-                    bullets={[
-                        "Completed over fifty credits of coursework spanning IT, cybersecurity, and computer science while enrolled in an early college program at the Cabarrus Early College of Technology.",
+                        bullets={[
+                            "Completed over fifty credits of coursework spanning IT, cybersecurity, and computer science while enrolled in an early college program at the Cabarrus Early College of Technology.",
                             "Gained a comprehensive understanding of software engineering principles, containerized, full-stack web apps, RESTful APIs, image decryption, network security, and reverse engineering.",
                             "Acquired hands-on experience in red and blue team activities.",
                         ]}
