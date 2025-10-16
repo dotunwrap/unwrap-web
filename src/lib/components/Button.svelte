@@ -7,7 +7,7 @@
 
 <a
     href={link}
-    target={ openInNewTab ? "_blank" : "_self" }
+    target={openInNewTab ? "_blank" : "_self"}
     class="rounded-full bg-crust hover:bg-blue group transition-colors p-3"
 >
     {#if text}
