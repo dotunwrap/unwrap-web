@@ -4,7 +4,7 @@ on:
     branches:
       - master
     paths:
-      - ./frontend/**
+      - frontend/**
   workflow_dispatch:
 permissions:
   contents: read

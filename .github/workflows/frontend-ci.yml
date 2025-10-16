@@ -6,12 +6,12 @@ on:
       - synchronize
       - reopened
     paths:
-      - ./frontend/**
+      - frontend/**
   push:
     branches:
       - master
     paths:
-      - ./frontend/**
+      - frontend/**
 permissions:
   contents: read
 concurrency:

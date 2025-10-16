@@ -6,12 +6,12 @@ on:
       - synchronize
       - reopened
     paths:
-      - ./backend/**
+      - backend/**
   push:
     branches:
       - master
     paths:
-      - ./backend/**
+      - backend/**
 permissions:
   contents: read
 concurrency:
