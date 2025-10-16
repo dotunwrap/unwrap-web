@@ -1,6 +1,9 @@
-# <p align="center">Gabby's Portfolio Site :3</p>
-
-This is the monorepo for [my personal portfolio website](https://www.dotunwrap.dev).
+<div align="center">
+    <h1 align="center">Gabby's Portfolio Site :3</h1>
+    <p>This is the monorepo for <a href="https://dotunwrap.dev">my personal portfolio website</a>.</p>
+    <a href="https://github.com/dotunwrap/unwrap-web/actions/workflows/frontend-ci.yml"><img src="https://github.com/dotunwrap/unwrap-web/actions/workflows/frontend-ci.yml/badge.svg" alt="Frontend / CI"></a>
+    <a href="https://github.com/dotunwrap/unwrap-web/actions/workflows/backend-ci.yml"><img src="https://github.com/dotunwrap/unwrap-web/actions/workflows/backend-ci.yml/badge.svg" alt="backend / CI"></a>
+</div>
 
 ## [Frontend](/frontend)
 
