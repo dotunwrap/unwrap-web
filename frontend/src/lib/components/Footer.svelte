@@ -3,7 +3,7 @@
 </script>
 
 <footer id="footer" class="flex flex-row bg-crust items-center py-3 justify-center">
-    <div class="flex flex-row justify-center items-center [&>*]:mx-2">
+    <div class="flex flex-row justify-center items-center *:mx-2">
         <Social name="github" />
         <Social name="linkedin" />
         <Social name="twitter" />

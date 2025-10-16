@@ -8,7 +8,7 @@
         target: string;
     };
 
-    const buttons = [
+    const buttons: Button[] = [
         {
             text: "Home",
             target: "home",

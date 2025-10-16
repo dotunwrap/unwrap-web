@@ -6,15 +6,9 @@
 
 <button
     data-target={target}
-    class:active={isActive}
+    class:bg-mantle={isActive}
     class="rounded-full p-2 mx-1 text-subtext1 hover:bg-crust transition-colors"
     on:click
 >
     {text}
 </button>
-
-<style lang="postcss">
-    .active {
-        @apply bg-mantle;
-    }
-</style>

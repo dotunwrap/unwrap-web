@@ -12,7 +12,7 @@
 </script>
 
 <div
-    class="flex flex-col justify-center p-4 border-solid bg-crust shadow-lg rounded-lg [&>*]:my-2 {isLink
+    class="flex flex-col justify-center p-4 border-solid bg-crust shadow-lg rounded-lg *:my-2 {isLink
         ? 'group transition-all duration-700 hover:scale-[1.02]'
         : ''} {$$props.class}"
 >
