@@ -1,0 +1,58 @@
+name: Frontend/CI
+on:
+  pull_request:
+    types:
+      - opened
+      - synchronize
+      - reopened
+    paths:
+      - ./frontend/**
+  push:
+    branches:
+      - master
+    paths:
+      - ./frontend/**
+permissions:
+  contents: read
+concurrency:
+  group: frontend-ci-${{ github.ref }}
+  cancel-in-progress: true
+env:
+  MODULE_DIR: ./frontend
+  # TODO: Pin version
+  BUN_VERSION: latest
+jobs:
+  check-type:
+    name: Check TS
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ${{ env.MODULE_DIR }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: ${{ env.BUN_VERSION }}
+      - name: Install dependencies
+        run: bun install --frozen-lockfile
+      - name: Check ts
+        run: bun run check
+  check-formatting:
+    name: Check formatting
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ${{ env.MODULE_DIR }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: ${{ env.BUN_VERSION }}
+      - name: Install dependencies
+        run: bun install --frozen-lockfile
+      - name: Check formatting
+        run: bun run format:check
