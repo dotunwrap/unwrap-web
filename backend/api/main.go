@@ -13,7 +13,7 @@ func main() {
 	http.RegisterMiddlewares(r)
 	http.RegisterRoutes(r)
 
-	if err := r.Run(":8080"); err != nil {
+	if err := r.Run(":8000"); err != nil {
 		log.Fatal(err)
 	}
 }
