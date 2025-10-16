@@ -1,6 +1,9 @@
 import adapter from "@sveltejs/adapter-static";
 import preprocess from "svelte-preprocess";
 
+const base = process.env.PUBLIC_BASE_PATH ?? "";
+const dev = process.env.NODE_ENV === "development";
+
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
     preprocess: preprocess(),
@@ -13,7 +16,7 @@ const config = {
             entries: ["/"],
         },
         paths: {
-            base: process.env.NODE_ENV === "development" ? "" : "/unwrap-web",
+            base: dev ? "" : base,
         },
     },
 };
