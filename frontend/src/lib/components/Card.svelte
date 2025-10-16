@@ -17,10 +17,10 @@
         : ''} {$$props.class}"
 >
     <div>
-        <div class="flex flex-row justify-between items-center">
+        <div class="flex flex-col items-start gap-1 md:flex-row md:justify-between md:items-center">
             <h3 class="text-lg text-blue">{title}</h3>
             {#if date}
-                <p class="text-lg text-subtext1">{date}</p>
+                <p class="text-lg text-subtext1 md:text-right">{date}</p>
             {/if}
         </div>
         {#if subtitle}
