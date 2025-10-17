@@ -15,10 +15,19 @@ services:
     build:
       context: ./frontend
       target: prod
+      args:
+        PUBLIC_API_BASE_URL: ${PUBLIC_API_BASE_URL:-}
+    restart: unless-stopped
+    profiles:
+      - prod
+
+  proxy:
+    build:
+      context: .
+      dockerfile: infrastructure/nginx/Dockerfile
     depends_on:
+      - frontend
       - backend
-    environment:
-      NODE_ENV: production
     ports:
       - "8080:80"
     restart: unless-stopped
@@ -44,12 +53,15 @@ services:
     build:
       context: ./frontend
       target: dev
+      args:
+        PUBLIC_API_BASE_URL: ${PUBLIC_API_BASE_URL:-http://backend-dev:8000}
     depends_on:
       - backend-dev
     environment:
       NODE_ENV: development
       CHOKIDAR_USEPOLLING: "1"
       VITE_DEV_API_TARGET: http://backend-dev:8000
+      PUBLIC_API_BASE_URL: http://backend-dev:8000
     ports:
       - "5127:5127"
     volumes:

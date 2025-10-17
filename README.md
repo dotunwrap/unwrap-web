@@ -28,6 +28,10 @@ The site is currently deployed on GitHub Pages using a [CD action](/.github/work
 
 The backend is written in Go using Gin. It's currently undeployed and unused, but sitting here waiting for a moment where I might need some endpoints or DB interaction.
 
+## [Infrastructure](/infrastructure)
+
+WIP
+
 ## Building
 
 The build process is fully containerized using Docker and Docker Compose.
