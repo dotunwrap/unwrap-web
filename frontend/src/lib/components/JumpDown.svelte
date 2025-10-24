@@ -36,12 +36,12 @@
     on:click={scrollToAnchor}
     bind:this={button}
     class={cn(
-        "group inline-flex text-subtext1 font-bold text-2xl absolute justify-center items-center bottom-2 animate-bounce transition-opacity",
+        "group inline-flex text-subtext1 font-bold text-2xl absolute justify-center items-center bottom-2 animate-bounce transition-opacity cursor-pointer",
         $$props.class as string | undefined,
     )}
 >
     <Icon
         icon="fluent:arrow-circle-down-24-filled"
-        class="text-subtext1 drop-shadow-lg w-12 h-12 group-hover:text-blue transition-colors rounded-full"
+        class="text-subtext1 drop-shadow-lg w-12 h-12 group-hover:text-blue transition-colors rounded-4xl"
     />
 </button>

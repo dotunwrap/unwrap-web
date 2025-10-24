@@ -13,6 +13,7 @@
         { text: "About", target: "about" },
         { text: "Portfolio", target: "portfolio" },
         { text: "Resume", target: "resume" },
+        { text: "Blog", target: "blog" },
     ];
 
     let activeButton = "";
@@ -81,15 +82,13 @@
 
 <nav
     id="nav"
-    class="flex flex-row justify-center p-5 w-screen text-regular fixed top-0 left-0 right-0 z-50 transition-all"
+    class="flex flex-row justify-center p-5 w-screen text-regular fixed top-0 left-0 right-0 z-50 transition-all gap-2"
 >
-    <div>
-        {#each buttons as button (button.target)}
-            <NavButton
-                {...button}
-                isActive={activeButton === button.target}
-                on:click={() => clickHandler(button)}
-            />
-        {/each}
-    </div>
+    {#each buttons as button (button.target)}
+        <NavButton
+            {...button}
+            isActive={activeButton === button.target}
+            on:click={() => clickHandler(button)}
+        />
+    {/each}
 </nav>

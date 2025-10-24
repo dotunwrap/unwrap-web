@@ -11,7 +11,7 @@
     data-target={target}
     class:bg-mantle={isActive}
     class={cn(
-        "rounded-full p-2 mx-1 text-subtext1 hover:bg-crust transition-colors cursor-pointer",
+        "rounded-4xl py-2 px-4 text-subtext1 hover:bg-crust transition-colors cursor-pointer",
         $$props.class as string | undefined,
     )}
     on:click

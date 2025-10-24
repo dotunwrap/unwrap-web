@@ -13,7 +13,7 @@
     target={openInNewTab ? "_blank" : "_self"}
     rel={openInNewTab ? "noopener noreferrer" : undefined}
     class={cn(
-        "rounded-full bg-crust hover:bg-blue group transition-colors p-3",
+        "rounded-4xl bg-crust hover:bg-blue group transition-colors py-3 px-6",
         $$props.class as string | undefined,
     )}
 >
