@@ -262,9 +262,9 @@
         <FadeIn>
             <h2 class="text-3xl text-blue text-center font-bold mt-2">My Work</h2>
         </FadeIn>
-        <div class="flex w-full flex-col items-center gap-6 max-w-5xl">
+        <div class="flex w-full flex-col items-center gap-6 max-w-7xl">
             {#each projects as project}
-                <FadeIn delay={project.popupDelay} class="w-full max-w-4xl">
+                <FadeIn delay={project.popupDelay} class="w-full">
                     <a href={project.url} target="_blank" class="block w-full">
                         <Card
                             title={project.title}
@@ -299,7 +299,7 @@
             </FadeIn>
 
             <div class="flex w-full flex-col items-center gap-6">
-                <FadeIn class="w-full max-w-4xl">
+                <FadeIn class="w-full max-w-7xl">
                     <Card
                         title="Software Engineer"
                         subtitle="Red Ventures - RVGT"
@@ -309,7 +309,7 @@
                     />
                 </FadeIn>
 
-                <FadeIn class="w-full max-w-4xl">
+                <FadeIn class="w-full max-w-7xl">
                     <Card
                         title="Software Engineer III"
                         subtitle="MedShift - Velocity"
@@ -324,7 +324,7 @@
                     />
                 </FadeIn>
 
-                <FadeIn class="w-full max-w-4xl">
+                <FadeIn class="w-full max-w-7xl">
                     <Card
                         title="Full Stack & DevOps Engineer"
                         subtitle="Punchmark"
@@ -350,7 +350,7 @@
             </FadeIn>
 
             <div class="flex w-full flex-col items-center gap-6">
-                <FadeIn class="w-full max-w-4xl">
+                <FadeIn class="w-full max-w-7xl">
                     <Card
                         title="Associate of Applied Science (Cybersecurity)"
                         subtitle="Rowan Cabarrus Community College"
