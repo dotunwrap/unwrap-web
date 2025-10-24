@@ -1,5 +1,6 @@
 <script lang="ts">
     import Icon from "@iconify/svelte";
+    import { cn } from "$lib/utils";
 
     export let title: string;
     export let subtitle: string = "";
@@ -12,9 +13,12 @@
 </script>
 
 <div
-    class="flex flex-col justify-center p-4 border-solid bg-crust shadow-lg rounded-lg *:my-2 {isLink
-        ? 'group transition-all duration-700 hover:scale-[1.02]'
-        : ''} {$$props.class}"
+    {...$$restProps}
+    class={cn(
+        "flex flex-col justify-center p-4 border-solid bg-crust shadow-lg rounded-lg *:my-2",
+        isLink ? "group transition-all duration-700 hover:scale-[1.02]" : "",
+        $$props.class as string | undefined,
+    )}
 >
     <div>
         <div class="flex flex-col items-start gap-1 md:flex-row md:justify-between md:items-center">
