@@ -17,12 +17,5 @@
         $$props.class as string | undefined,
     )}
 >
-    {#if text}
-        <p class="group-hover:text-crust transition-colors">{text}</p>
-    {:else}
-        <Icon
-            icon="material-symbols:download"
-            class="group-hover:text-crust transition-colors text-2xl"
-        />
-    {/if}
+    <p class="group-hover:text-crust transition-colors"><slot /></p>
 </a>

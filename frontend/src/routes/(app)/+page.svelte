@@ -15,7 +15,7 @@
 </script>
 
 <Page>
-    <PageSection id="home">
+    <PageSection id="home" fillScreen>
         <FadeIn>
             <div
                 class="w-full flex flex-col lg:flex-row text-6xl justify-center items-center flex-wrap font-mono"
@@ -34,7 +34,7 @@
         <JumpDown anchor="#about" />
     </PageSection>
 
-    <PageSection id="about" class="text-center">
+    <PageSection id="about" class="text-center" fillScreen>
         <FadeIn class="flex items-center justify-center my-10">
             <img src={headshot} alt="Gabby's headshot" class="rounded-full max-md:w-32 w-52" />
         </FadeIn>
@@ -63,11 +63,11 @@
         </FadeIn>
 
         <FadeIn delay={1} class="flex justify-center items-center my-9">
-            <Button link="https://github.com/dotunwrap" text="View my work" openInNewTab={true} />
+            <Button link="https://github.com/dotunwrap" openInNewTab={true}>View my work</Button>
         </FadeIn>
     </PageSection>
 
-    <PageSection id="portfolio" title="My Work" fadeIn>
+    <PageSection id="portfolio" title="My Work" fadeIn fillScreen>
         <div class="flex w-full flex-col items-center gap-6 max-w-7xl">
             {#each data.projects as project}
                 <FadeIn delay={project.popupDelay ?? 0} class="w-full">
@@ -86,7 +86,7 @@
         </div>
     </PageSection>
 
-    <PageSection id="resume">
+    <PageSection id="resume" fillScreen>
         <div id="skills">
             <FadeIn>
                 <h2 class="text-3xl font-bold text-blue text-center my-3">Skills</h2>
@@ -145,9 +145,27 @@
             <FadeIn class="flex justify-center items-center mt-3">
                 <Button
                     link="https://github.com/dotunwrap/resume/releases/latest/download/gabriella-simpson-software-engineer-resume.pdf"
-                    text="Download my resume"
-                />
+                >
+                    Download my resume
+                </Button>
             </FadeIn>
         </div>
     </PageSection>
+
+    {#if data.blogPosts.length > 0}
+        <PageSection id="blog" title="Blog Posts" fadeIn>
+            {#each data.blogPosts.slice(0, 3) as blogPost}
+                <FadeIn class="w-full max-w-7xl">
+                    <a href={`blog/${blogPost.slug}`} class="block w-full">
+                        <Card {...blogPost} class="w-full" isLink />
+                    </a>
+                </FadeIn>
+            {/each}
+            {#if data.blogPosts.length > 3}
+                <FadeIn class="flex justify-center items-center">
+                    <Button link="/blog">Show more</Button>
+                </FadeIn>
+            {/if}
+        </PageSection>
+    {/if}
 </Page>

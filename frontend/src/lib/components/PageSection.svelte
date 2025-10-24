@@ -4,13 +4,15 @@
 
     export let title = "";
     export let fadeIn = false;
+    export let fillScreen = false;
 </script>
 
 <div
     id={$$props.id}
     {...$$restProps}
     class={cn(
-        "min-h-screen relative flex flex-col justify-center items-center p-2 *:my-3",
+        "relative flex flex-col justify-center items-center p-2 *:my-3",
+        fillScreen ? "min-h-screen" : undefined,
         $$props.class as string | undefined,
     )}
 >
