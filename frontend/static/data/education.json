@@ -1,13 +1,13 @@
 [
-  {
-    "title": "Associate of Applied Science (Cybersecurity)",
-    "subtitle": "Rowan Cabarrus Community College",
-    "date": "2016 - 2020",
-    "description": "",
-    "bullets": [
-      "Completed over fifty credits of coursework spanning IT, cybersecurity, and computer science while enrolled in an early college program at the Cabarrus Early College of Technology.",
-      "Gained a comprehensive understanding of software engineering principles, containerized, full-stack web apps, RESTful APIs, image decryption, network security, and reverse engineering.",
-      "Acquired hands-on experience in red and blue team activities."
-    ]
-  }
+    {
+        "title": "Associate of Applied Science (Cybersecurity)",
+        "subtitle": "Rowan Cabarrus Community College",
+        "date": "2016 - 2020",
+        "description": "",
+        "bullets": [
+            "Completed over fifty credits of coursework spanning IT, cybersecurity, and computer science while enrolled in an early college program at the Cabarrus Early College of Technology.",
+            "Gained a comprehensive understanding of software engineering principles, containerized, full-stack web apps, RESTful APIs, image decryption, network security, and reverse engineering.",
+            "Acquired hands-on experience in red and blue team activities."
+        ]
+    }
 ]

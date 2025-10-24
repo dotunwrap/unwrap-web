@@ -1,28 +1,29 @@
-@import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@500;700&display=swap") layer(base);
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@500;700&display=swap")
+layer(base);
 @import "tailwindcss";
 @import "@catppuccin/tailwindcss/frappe.css";
 
 @theme {
-  --color-base: var(--color-ctp-base);
-  --color-mantle: var(--color-ctp-mantle);
-  --color-crust: var(--color-ctp-crust);
-  --color-text: var(--color-ctp-text);
-  --color-subtext1: var(--color-ctp-subtext1);
-  --color-subtext0: var(--color-ctp-subtext0);
-  --color-overlay2: var(--color-ctp-overlay2);
-  --color-overlay1: var(--color-ctp-overlay1);
-  --color-overlay0: var(--color-ctp-overlay0);
-  --color-surface2: var(--color-ctp-surface2);
-  --color-surface1: var(--color-ctp-surface1);
-  --color-surface0: var(--color-ctp-surface0);
-  --color-blue: var(--color-ctp-blue);
-  --color-sky: var(--color-ctp-sky);
-  --color-peach: var(--color-ctp-peach);
-  --font-mono: "Fira Code", monospace;
+    --color-base: var(--color-ctp-base);
+    --color-mantle: var(--color-ctp-mantle);
+    --color-crust: var(--color-ctp-crust);
+    --color-text: var(--color-ctp-text);
+    --color-subtext1: var(--color-ctp-subtext1);
+    --color-subtext0: var(--color-ctp-subtext0);
+    --color-overlay2: var(--color-ctp-overlay2);
+    --color-overlay1: var(--color-ctp-overlay1);
+    --color-overlay0: var(--color-ctp-overlay0);
+    --color-surface2: var(--color-ctp-surface2);
+    --color-surface1: var(--color-ctp-surface1);
+    --color-surface0: var(--color-ctp-surface0);
+    --color-blue: var(--color-ctp-blue);
+    --color-sky: var(--color-ctp-sky);
+    --color-peach: var(--color-ctp-peach);
+    --font-mono: "Fira Code", monospace;
 }
 
 @layer utilities {
-  .text-regular {
-    color: var(--color-subtext0);
-  }
+    .text-regular {
+        color: var(--color-subtext0);
+    }
 }

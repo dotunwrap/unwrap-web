@@ -70,7 +70,7 @@
     <PageSection id="portfolio" title="My Work" fadeIn>
         <div class="flex w-full flex-col items-center gap-6 max-w-7xl">
             {#each data.projects as project}
-                <FadeIn delay={project.popupDelay} class="w-full">
+                <FadeIn delay={project.popupDelay ?? 0} class="w-full">
                     <a href={project.url} target="_blank" class="block w-full">
                         <Card
                             title={project.title}
