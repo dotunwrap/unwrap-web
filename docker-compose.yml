@@ -43,9 +43,21 @@ services:
     ports:
       - "8000:8000"
     volumes:
-      - ./backend:/app
       - go-build-cache:/root/.cache/go-build
       - go-mod-cache:/go/pkg/mod
+    develop:
+      watch:
+        - action: sync
+          path: ./backend
+          target: /usr/src/app
+          ignore:
+            - tmp/
+            - bin/
+            - .git/
+        - action: rebuild
+          path: ./backend/go.mod
+        - action: rebuild
+          path: ./backend/go.sum
     profiles:
       - dev
 
@@ -64,9 +76,20 @@ services:
       PUBLIC_API_BASE_URL: http://backend-dev:8000
     ports:
       - "5127:5127"
-    volumes:
-      - ./frontend:/usr/src/app
-      - frontend-node-modules:/usr/src/app/node_modules
+    develop:
+      watch:
+        - action: sync
+          path: ./frontend
+          target: /usr/src/app
+          ignore:
+            - node_modules/
+            - build/
+            - .svelte-kit/
+            - .git/
+        - action: rebuild
+          path: ./frontend/package.json
+        - action: rebuild
+          path: ./frontend/bun.lock
     profiles:
       - dev
 
@@ -77,4 +100,3 @@ networks:
 volumes:
   go-build-cache:
   go-mod-cache:
-  frontend-node-modules:

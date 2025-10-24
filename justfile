@@ -1,5 +1,5 @@
 dev:
-  docker compose --profile dev up
+  docker compose --profile dev up --watch
 
 prod:
   docker compose --profile prod up
