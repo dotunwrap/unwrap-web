@@ -1,9 +1,7 @@
 <script lang="ts">
-    import Icon from "@iconify/svelte";
     import { cn } from "$lib/utils";
 
     export let link: string;
-    export let text = "";
     export let openInNewTab = false;
 </script>
 

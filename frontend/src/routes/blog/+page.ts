@@ -1,6 +1,6 @@
 import type { BlogPost } from "$lib/types";
 import { getBlogPosts } from "$lib/utils";
-import type { PageLoad } from "../$types";
+import type { PageLoad } from "./$types";
 
 type PageData = {
     blogPosts: BlogPost[];
