@@ -1,0 +1,146 @@
+[
+  {
+    "name": "JavaScript",
+    "icon": "skill-icons:javascript"
+  },
+  {
+    "name": "TypeScript",
+    "icon": "skill-icons:typescript"
+  },
+  {
+    "name": "HTML",
+    "icon": "skill-icons:html"
+  },
+  {
+    "name": "CSS",
+    "icon": "skill-icons:css"
+  },
+  {
+    "name": "jQuery",
+    "icon": "skill-icons:jquery"
+  },
+  {
+    "name": "React",
+    "icon": "skill-icons:react-dark"
+  },
+  {
+    "name": "Next",
+    "icon": "skill-icons:nextjs-dark"
+  },
+  {
+    "name": "Vue",
+    "icon": "skill-icons:vuejs-dark"
+  },
+  {
+    "name": "Svelte",
+    "icon": "skill-icons:svelte"
+  },
+  {
+    "name": "SCSS",
+    "icon": "skill-icons:sass"
+  },
+  {
+    "name": "Tailwind",
+    "icon": "skill-icons:tailwindcss-dark"
+  },
+  {
+    "name": "Bootstrap",
+    "icon": "skill-icons:bootstrap"
+  },
+  {
+    "name": "PHP",
+    "icon": "skill-icons:php-dark"
+  },
+  {
+    "name": "MySQL",
+    "icon": "skill-icons:mysql-dark"
+  },
+  {
+    "name": "PostgreSQL",
+    "icon": "skill-icons:postgresql-dark"
+  },
+  {
+    "name": "MongoDB",
+    "icon": "skill-icons:mongodb"
+  },
+  {
+    "name": "C",
+    "icon": "skill-icons:c"
+  },
+  {
+    "name": "C++",
+    "icon": "skill-icons:cpp"
+  },
+  {
+    "name": "C#",
+    "icon": "skill-icons:cs"
+  },
+  {
+    "name": "Rust",
+    "icon": "skill-icons:rust"
+  },
+  {
+    "name": "Go",
+    "icon": "skill-icons:golang"
+  },
+  {
+    "name": "Lua",
+    "icon": "skill-icons:lua-dark"
+  },
+  {
+    "name": "Python",
+    "icon": "skill-icons:python-dark"
+  },
+  {
+    "name": "Django",
+    "icon": "skill-icons:django"
+  },
+  {
+    "name": "Node",
+    "icon": "skill-icons:nodejs-dark"
+  },
+  {
+    "name": "Express",
+    "icon": "skill-icons:expressjs-dark"
+  },
+  {
+    "name": "Prisma",
+    "icon": "skill-icons:prisma"
+  },
+  {
+    "name": "Git",
+    "icon": "skill-icons:git"
+  },
+  {
+    "name": "Linux",
+    "icon": "skill-icons:linux-dark"
+  },
+  {
+    "name": "Bash",
+    "icon": "skill-icons:bash-dark"
+  },
+  {
+    "name": "Docker",
+    "icon": "skill-icons:docker"
+  },
+  {
+    "name": "Ansible",
+    "icon": "skill-icons:ansible"
+  },
+  {
+    "name": "Terraform",
+    "icon": "skill-icons:terraform-dark"
+  },
+  {
+    "name": "AWS",
+    "icon": "skill-icons:aws-dark"
+  },
+  {
+    "name": "Red Hat Enterprise Linux",
+    "icon": "skill-icons:redhat-dark"
+  },
+  {
+    "name": "Neovim",
+    "icon": "skill-icons:neovim-dark"
+  }
+]

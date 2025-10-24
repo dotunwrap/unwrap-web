@@ -1,0 +1,52 @@
+[
+  {
+    "title": "determinvim",
+    "date": "2025",
+    "tags": [
+      "Nix",
+      "Neovim"
+    ],
+    "description": "A Neovim configuration written in Nix using nvf.",
+    "url": "https://github.com/dotunwrap/determinvim"
+  },
+  {
+    "title": "Goldbach's Conjecture Solver",
+    "date": "2025",
+    "tags": [
+      "Rust"
+    ],
+    "description": "A Rust program that attempts to solve Goldbach's Conjecture, which states that every even integer greater than 2 can be expressed as the sum of two prime numbers.",
+    "url": "https://github.com/dotunwrap/goldbachs-conjecture-solver"
+  },
+  {
+    "title": "DM Helper",
+    "date": "2024",
+    "tags": [
+      "Rust",
+      "Tokio",
+      "Discord"
+    ],
+    "description": "A D&D management Discord bot written in Rust using Poise.",
+    "url": "https://github.com/dotunwrap/dm-helper/"
+  },
+  {
+    "title": "Hangul Recognition",
+    "date": "2023",
+    "tags": [
+      "TypeScript",
+      "Vue"
+    ],
+    "description": "A web application written in Vue.js to help Korean learners master Hangul.",
+    "url": "https://github.com/dotunwrap/hangul-recognition/"
+  },
+  {
+    "title": "Mandarin Tone Recognition",
+    "date": "2023",
+    "tags": [
+      "TypeScript",
+      "Svelte"
+    ],
+    "description": "A web application written in Svelte to help Mandarin learners differentiate vowel tones.",
+    "url": "https://github.com/dotunwrap/mandarin-tone-recognition/"
+  }
+]
