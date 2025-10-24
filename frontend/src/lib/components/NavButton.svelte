@@ -7,7 +7,7 @@
 <button
     data-target={target}
     class:bg-mantle={isActive}
-    class="rounded-full p-2 mx-1 text-subtext1 hover:bg-crust transition-colors"
+    class="rounded-full p-2 mx-1 text-subtext1 hover:bg-crust transition-colors cursor-pointer"
     on:click
 >
     {text}
