@@ -62,7 +62,7 @@ docker compose --profile prod up
 
 ### Development Environment
 
-To build the development containers, run:
+To build the development containers with live file synchronization, run:
 
 ```sh
 just dev
@@ -71,5 +71,7 @@ just dev
 or, if you do not have just:
 
 ```sh
-docker compose --profile dev up
+docker compose --profile dev up --watch
 ```
+
+The `--watch` flag keeps the dev containers running and automatically syncs changes from `frontend/` and `backend/` into the corresponding services, rebuilding the images when dependency manifests change. Ensure you are using Docker Compose v2.22 or newer so the `--watch` flag is available.
