@@ -1,30 +1,45 @@
 <script lang="ts">
     import { onMount } from "svelte";
+    import { cn } from "$lib/utils";
 
     export let delay = 0;
 
     let isVisible = false;
-    let div: Element;
+    let container: HTMLElement | null = null;
+    let observer: IntersectionObserver | null = null;
+    let timeoutId: ReturnType<typeof setTimeout> | null = null;
 
     onMount(() => {
-        const observer = new IntersectionObserver((entries) => {
+        observer = new IntersectionObserver((entries) => {
             entries.forEach((entry) => {
                 if (!entry.isIntersecting) return;
-                setTimeout(
+                if (timeoutId) clearTimeout(timeoutId);
+                timeoutId = setTimeout(
                     () => {
                         isVisible = true;
-                        observer.disconnect();
+                        observer?.disconnect();
                     },
                     150 * (1 + delay),
                 );
             });
         });
 
-        observer.observe(div);
+        if (container) observer.observe(container);
+
+        return () => {
+            observer?.disconnect();
+            if (timeoutId) clearTimeout(timeoutId);
+            timeoutId = null;
+            isVisible = false;
+        };
     });
 </script>
 
-<div class="fade-in {isVisible ? 'visible' : ''} w-full {$$props.class}" bind:this={div}>
+<div
+    {...$$restProps}
+    class={cn("fade-in w-full", isVisible && "visible", $$props.class as string | undefined)}
+    bind:this={container}
+>
     <slot />
 </div>
 

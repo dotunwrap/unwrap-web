@@ -9,90 +9,86 @@
     };
 
     const buttons: Button[] = [
-        {
-            text: "Home",
-            target: "home",
-        },
-        {
-            text: "About",
-            target: "about",
-        },
-        {
-            text: "Portfolio",
-            target: "portfolio",
-        },
-        {
-            text: "Resume",
-            target: "resume",
-        },
+        { text: "Home", target: "home" },
+        { text: "About", target: "about" },
+        { text: "Portfolio", target: "portfolio" },
+        { text: "Resume", target: "resume" },
+        { text: "Blog", target: "blog" },
     ];
 
     let activeButton = "";
     let handlingClick = false;
+    let observer: IntersectionObserver | null = null;
 
-    const findButtonFromTarget = (target: string) => {
-        return buttons.find((button) => button.target === target);
-    };
+    const findButtonFromTarget = (target: string) =>
+        buttons.find((button) => button.target === target);
 
     const clickHandler = (button: Button) => {
         if (!button.target) return;
-        let element = document.getElementById(button.target);
+        const element = document.getElementById(button.target);
+        if (!element) return;
         handlingClick = true;
         activeButton = button.target;
-        element?.scrollIntoView({ behavior: "smooth" });
+        element.scrollIntoView({ behavior: "smooth" });
     };
 
     const handleIntersection = (entries: IntersectionObserverEntry[]) => {
-        entries.forEach((entry: IntersectionObserverEntry) => {
+        entries.forEach((entry) => {
             if (handlingClick && entry.target.id === activeButton) {
                 handlingClick = false;
             } else if (handlingClick) {
                 return;
             }
 
-            let button = findButtonFromTarget(entry.target.id);
+            const button = findButtonFromTarget(entry.target.id);
             if (!button || !entry.isIntersecting) return;
             activeButton = button.target;
         });
     };
 
+    const handleScroll = () => {
+        const nav = document.getElementById("nav");
+        if (!nav) return;
+
+        if (isScrollBarAtTopOfPage()) {
+            nav.classList.remove("shadow-sm", "bg-base");
+            return;
+        }
+
+        nav.classList.add("shadow-sm", "bg-base");
+    };
+
     onMount(() => {
-        window.addEventListener("scroll", () => {
-            const nav = document.getElementById("nav");
-            if (!nav) return;
+        window.addEventListener("scroll", handleScroll, { passive: true });
+        handleScroll();
 
-            if (isScrollBarAtTopOfPage()) {
-                nav.classList.remove("shadow-sm");
-                nav.classList.remove("bg-base");
-                return;
-            }
-
-            nav.classList.add("shadow-sm");
-            nav.classList.add("bg-base");
-        });
-
-        const observer = new IntersectionObserver(handleIntersection, {
+        observer = new IntersectionObserver(handleIntersection, {
             root: null,
             rootMargin: "0px",
             threshold: 0.25,
         });
-        buttons.forEach((button) =>
-            observer.observe(document.getElementById(button.target) as HTMLElement),
-        );
+
+        buttons.forEach((button) => {
+            const section = document.getElementById(button.target);
+            if (section) observer?.observe(section);
+        });
+
+        return () => {
+            window.removeEventListener("scroll", handleScroll);
+            observer?.disconnect();
+        };
     });
 </script>
 
 <nav
     id="nav"
-    class="flex flex-row justify-center p-5 w-screen text-regular fixed top-0 left-0 right-0 z-50 transition-all"
+    class="flex flex-row justify-center p-5 w-screen text-regular fixed top-0 left-0 right-0 z-50 transition-all gap-2"
 >
-    <div>
-        {#each buttons as button (button.target)}
-            <NavButton
-                {...button}
-                isActive={activeButton === button.target}
-                on:click={() => clickHandler(button)}
-            />
-        {/each}
-    </div>
+    {#each buttons as button (button.target)}
+        <NavButton
+            {...button}
+            isActive={activeButton === button.target}
+            on:click={() => clickHandler(button)}
+        />
+    {/each}
 </nav>

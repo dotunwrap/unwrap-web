@@ -19,6 +19,7 @@ layer(base);
     --color-blue: var(--color-ctp-blue);
     --color-sky: var(--color-ctp-sky);
     --color-peach: var(--color-ctp-peach);
+    --font-mono: "Fira Code", monospace;
 }
 
 @layer utilities {
