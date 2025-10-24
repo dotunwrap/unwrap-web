@@ -12,7 +12,7 @@
     <a
         href="https://github.com/dotunwrap/unwrap-web"
         target="_blank"
-        class="absolute right-4 italic text-sm text-subtext1 hover:text-blue transition-colors"
+        class="absolute right-4 italic text-sm text-subtext1 hover:text-blue transition-colors max-sm:hidden"
         >view source →</a
     >
 </footer>
