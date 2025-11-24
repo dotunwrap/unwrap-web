@@ -12,6 +12,14 @@
 
     const projects = [
         {
+            title: "Aitai MC",
+            date: "2025",
+            tags: ["Terraform"],
+            description: "A Minecraft server deployed on Hetzner using Terraform.",
+            url: "https://github.com/dotunwrap/aitai-mc",
+            popupDelay: 1,
+        },
+        {
             title: "determinvim",
             date: "2025",
             tags: ["Nix", "Neovim"],
