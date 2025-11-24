@@ -23,7 +23,7 @@
             title: "determinvim",
             date: "2025",
             tags: ["Nix", "Neovim"],
-            description: "A Neovim configuration written in Nix using nvf.",
+            description: "A Neovim configuration written in Nix using Nixvim.",
             url: "https://github.com/dotunwrap/determinvim",
             popupDelay: 1,
         },
