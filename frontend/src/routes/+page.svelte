@@ -12,11 +12,11 @@
 
     const projects = [
         {
-            title: "Aitai MC",
+            title: "Hetzner MC Server Terraform Module",
             date: "2025",
             tags: ["Terraform"],
-            description: "A Minecraft server deployed on Hetzner using Terraform.",
-            url: "https://github.com/dotunwrap/aitai-mc",
+            description: "A Terraform module for deploying MC servers on Hetzner.",
+            url: "https://github.com/dotunwrap/terraform-hetzner-mc-server",
             popupDelay: 1,
         },
         {
@@ -25,6 +25,14 @@
             tags: ["Nix", "Neovim"],
             description: "A Neovim configuration written in Nix using Nixvim.",
             url: "https://github.com/dotunwrap/determinvim",
+            popupDelay: 1,
+        },
+        {
+            title: "NixOS Config",
+            date: "2025",
+            tags: ["Nix"],
+            description: "My personal NixOS & Home Manager configuration.",
+            url: "https://github.com/dotunwrap/nixos-config",
             popupDelay: 1,
         },
         {
@@ -60,6 +68,14 @@
             description:
                 "A web application written in Svelte to help Mandarin learners differentiate vowel tones.",
             url: "https://github.com/dotunwrap/mandarin-tone-recognition/",
+            popupDelay: 1,
+        },
+        {
+            title: "Unwrap Web",
+            date: "2023",
+            tags: ["TypeScript", "Svelte"],
+            description: "My personal portfolio website (the one you're on right now).",
+            url: "https://github.com/dotunwrap/unwrap-web/",
             popupDelay: 1,
         },
     ];
@@ -313,6 +329,12 @@
                         subtitle="Red Ventures - RVGT"
                         date="October 2025 - Present"
                         description="Red Ventures Growth & Transformation (RVGT) is a Red Ventures company that drives measurable growth for the world’s leading financial institutions — transforming how they acquire, engage, and retain customers."
+                        bullets={[
+                            "Founding engineer for the Site Reliability Engineering (SRE) practice in the organization, establishing core standards for observability, alerting, and chaos engineering to cultivate a culture of reliability across the organization.",
+                            "Orchestrate multi-cloud distributed systems for some of the largest financial institutions in the United States, maintaining a 99.99% SLA across platforms serving tens of millions of monthly active users (MAU).",
+                            "Engineer high-performance frontend applications using TypeScript, Astro, and Next.js.",
+                            "Design and manage CI/CD pipelines utilizing GitHub Actions (with Dagger) and Harness.",
+                        ]}
                         class="w-full"
                     />
                 </FadeIn>
